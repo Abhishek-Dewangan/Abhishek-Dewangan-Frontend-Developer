@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import {DataGrid} from '../DataGrid/DataGrid';
+// import {DataGrid} from '../DataGrid/DataGrid';
 import styles from './SearchForm.module.css';
 
 export const SearchForm = () => {
@@ -12,7 +14,7 @@ export const SearchForm = () => {
     setType(e.target.type.value);
   };
   useEffect(() => {
-    console.log(launchDate, status, type);
+    // console.log(launchDate, status, type);
   }, [status, type, launchDate]);
   return (
     <div>
@@ -23,12 +25,12 @@ export const SearchForm = () => {
           <option value='retired'>Retired</option>
           <option value='unknown'>Unknown</option>
         </select>
-        <select name='launchDate'className={styles.filter}>
+        <select name='launchDate' className={styles.filter}>
           <option value=''>Launch Date</option>
           <option value='htl'>Newest First</option>
           <option value='lth'>Oldest First</option>
         </select>
-        <select name='type'className={styles.filter}>
+        <select name='type' className={styles.filter}>
           <option value=''>Type</option>
           <option value='Dragon 1.0'>Dragon 1.0</option>
           <option value='Dragon 1.1'>Dragon 1.1</option>
@@ -36,6 +38,8 @@ export const SearchForm = () => {
         </select>
         <input type={'submit'} value={'Search'} />
       </form>
+      <DataGrid status={status} launchDate={launchDate} type={type} />
     </div>
   );
+  // <DataGrid status={status} launchDate={launchDate} type={type} />
 };
