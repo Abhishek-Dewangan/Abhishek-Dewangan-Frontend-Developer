@@ -36,7 +36,7 @@ export const SearchForm = () => {
           <option value='Dragon 1.1'>Dragon 1.1</option>
           <option value='Dragon 2.0'>Dragon 2.0</option>
         </select>
-        <input type={'submit'} value={'Search'} />
+        <input type={'submit'} value={'Search'} className={styles.filter}/>
       </form>
       <DataGrid status={status} launchDate={launchDate} type={type} />
     </div>

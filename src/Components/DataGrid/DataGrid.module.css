@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
-  margin: 1em 15%;
-  text-align: center;
+  margin: 1em auto;
+  width: 70%;
 }
 
 .gridBox {
@@ -25,22 +25,8 @@ h3 {
 .gridBox h3 {
   margin-bottom: 1em;
 }
-.filterBox {
-  box-shadow: rgba(0, 38, 255, 0.226) 0px 8px 24px;
-  width: 500px;
-  margin: 0 auto 2em;
-  padding: 1em;
-  /* text-align: center; */
-  display: flex;
-  /* gap: 1em; */
-  justify-items: center;
-  justify-content: space-evenly;
-}
 
-.filterBox select {
-  width: 150px;
-  font-size: large;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
+.notFound {
+  color: white;
+  align-items: center;
 }

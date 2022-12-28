@@ -11,12 +11,13 @@
   color: rgb(0, 0, 0);
   font-size: larger;
   font-family: 'Courier New', Courier, monospace;
+  
 }
 
 .image {
   width: 100%;
   height: 650px;
-  border-radius: 10px;
+  
 }
 
 .carousel {

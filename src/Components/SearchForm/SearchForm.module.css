@@ -3,9 +3,23 @@
   color: red;
   gap: 1em;
   justify-content: center;
+  margin-top: 1em;
 }
 
 .filter {
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
+option{
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+}
+

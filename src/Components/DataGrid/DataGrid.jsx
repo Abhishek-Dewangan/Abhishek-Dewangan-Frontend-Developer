@@ -8,33 +8,26 @@ export const DataGrid = ({status, launchDate, type}) => {
 
   const filter = (array) => {
     if (status) {
-      // console.log(status);
       array = array.filter((elem) => elem.status === status);
-      // console.log(array);
     }
 
     if (type) {
-      // console.log(status);
       array = array.filter((elem) => elem.type === type);
-      // console.log(array);
     }
 
     if (launchDate) {
-      // console.log(launchDate);
       if (launchDate === 'htl') {
         array.sort((a, b) => b.original_launch_unix - a.original_launch_unix);
       } else {
         array.sort((a, b) => a.original_launch_unix - b.original_launch_unix);
       }
     }
-
     setFilterData(array);
   };
 
   const getData = async () => {
     try {
       const res = await axios.get('https://api.spacexdata.com/v3/capsules');
-      console.log(res.data);
       setData(res.data);
       setFilterData(res.data);
     } catch (error) {
@@ -47,7 +40,6 @@ export const DataGrid = ({status, launchDate, type}) => {
 
   useEffect(() => {
     let result = [...data];
-    console.log(result);
     filter(result);
   }, [status, type, launchDate]);
   return (
@@ -71,7 +63,9 @@ export const DataGrid = ({status, launchDate, type}) => {
             );
           })
         ) : (
-          <h2>Data not found</h2>
+          <div className={styles.notFound}>
+            <h2>Data not matching with filter data</h2>
+          </div>
         )}
       </div>
     </div>

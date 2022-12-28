@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px 10em;
+  background-color: black;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.container a {
+  color: white;
+  text-decoration: none;
+}
