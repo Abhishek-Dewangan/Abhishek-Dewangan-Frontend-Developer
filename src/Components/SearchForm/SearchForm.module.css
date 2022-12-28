@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  color: red;
+  gap: 1em;
+  justify-content: center;
+}
+
+.filter{
+    padding: 5px 10px;
+    font-size: 15px;
+    
+}
