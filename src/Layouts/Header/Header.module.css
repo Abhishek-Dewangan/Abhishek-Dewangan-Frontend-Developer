@@ -9,7 +9,7 @@
   display: flex;
   margin-left: 2em;
   font-family: Lucida Handwriting;
-  
+  cursor: pointer;
 }
 
 .logoContainer {
@@ -19,4 +19,5 @@
 
 .menuIcon {
   margin: 1em 2em;
+  cursor: pointer;
 }

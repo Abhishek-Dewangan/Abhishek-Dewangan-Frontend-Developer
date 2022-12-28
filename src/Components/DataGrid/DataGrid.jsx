@@ -34,6 +34,7 @@ export const DataGrid = ({status, launchDate, type}) => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getData();
   }, []);
@@ -42,6 +43,7 @@ export const DataGrid = ({status, launchDate, type}) => {
     let result = [...data];
     filter(result);
   }, [status, type, launchDate]);
+
   return (
     <div>
       <div className={styles.gridData}>
@@ -64,7 +66,7 @@ export const DataGrid = ({status, launchDate, type}) => {
           })
         ) : (
           <div className={styles.notFound}>
-            <h2>Data not matching with filter data</h2>
+            <h2>Filtered data not found</h2>
           </div>
         )}
       </div>
