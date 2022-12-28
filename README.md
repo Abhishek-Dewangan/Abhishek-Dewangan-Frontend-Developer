@@ -10,9 +10,9 @@
 
 ## Tech-Stack and Tools used
 
-[HTML]
-[CSS]
-[React]
-[ANTD Carousel]
-[Axios]
-[React Icons]
+- HTML
+- CSS
+- React
+- ANTD Carousel
+- Axios
+- React Icons
